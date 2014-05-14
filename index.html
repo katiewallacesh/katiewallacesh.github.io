@@ -1,0 +1,149 @@
+<html>
+<head>
+    <title>Lilla Macarons</title>
+    <link href="http://fonts.googleapis.com/css?family=Niconne" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body {
+            font-family: "Josefin Sans", sans-serif;
+            margin: 0;
+            background: url("macarons.jpg");
+            background-size: 100%;
+            color: #fff;
+        }
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        h1#sticker {
+            margin: 0 auto;
+            text-align: center;
+            top: 25%;
+            position: relative;
+            font-family: 'Niconne', cursive;
+            font-size: 600%;
+            width: 2.5em;
+            height: 2.5em;
+            border-radius: 2em;
+            background: yellow;
+            line-height: 2.35em;
+            color: #fff;
+            border: 20px solid white;
+        }
+        
+        #contact {
+            position: fixed;
+            width: 16em;
+            left: 3em;
+            top:85%;
+            text-align: left;
+        }
+        
+        #contact .icons {
+            padding: 0 0 0 1.5em;
+        }
+        
+        #rightmenu {
+            background-color: rgba(128,0,128,0.4);
+            color: #fff;
+            width: 16em;
+            border-left: 3px solid purple;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            width: 15em;
+            height: 100%;
+            padding: 1em;
+        }
+        
+        .menutitle {
+            font-size: 150%;
+        }
+        
+        .flavours {
+            line-height: 2em;
+            font-size: 120%;
+            list-style-type: none;
+            padding: 0 0 0 0;
+        }
+
+        div.allergies {
+            font-size: 90%;
+            white-space: normal;
+            position: absolute;
+            top: 85%;
+        }
+        
+        #ordertext {
+            display: none;
+            font-size: 120%;
+        }
+        
+        #footer {
+            font-size: 70%;
+            position: absolute;
+            top: 97%;
+            width: 98%;
+            text-align: right;
+        }        
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <!-- ><link type="text/css" rel="stylesheet" href="jQuery.mmenu/src/css/jquery.mmenu.all.css" /> 
+    <script type="text/javascript" src="jQuery.mmenu/src/js/jquery.mmenu.js"></script> -->
+    <script type="text/javascript">
+        function openMenu() {
+            $(function(){
+                if ( $("#rightmenu").attr("data-open") != "true" ) {
+                    //alert($("#rightmenu").css("width"));
+                    $("#rightmenu").animate({left: "-=" + $("#rightmenu").css("width")}, 1000);
+                    $("#rightmenu").attr("data-open", "true");
+                }
+            });
+        }
+        
+        function closeMenu() {
+            $(function(){
+                if ( $("#rightmenu").attr("data-open") != "false" ) {
+                    $("#rightmenu").animate({left: "+=" + $("#rightmenu").css("width")}, 1000);
+                    $("#rightmenu").attr("data-open", "false");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1 id="sticker" onmouseover='openMenu(); $("#ordertext").fadeIn(2000);'>Lilla</h1>
+    <div id="contact">
+        <span id="ordertext">Place your order here</span><br />
+        <span class="icons">
+            <a href="http://facebook.com/macaronslilla"><img src="facebook-4-32.png" alt="facebook"/></a>
+            <a href="http://twitter.com/lilla_macarons"><img src="twitter-4-32.png" alt="twitter"/></a>
+            <a href="mailto:enquiries@lillamacarons.com"><img src="email-14-32.png" alt="email"/></a>
+        </span>
+    </div>
+    <div id="footer">
+        <span id="attribution">Photo by <a href="https://www.flickr.com/people/24576874@N00">Julien Haler</a> via Flickr</span>
+    </div>
+    
+    <!-- Menu -->
+    <div id="rightmenu" onclick="closeMenu();">
+        <p class="menutitle">Macaron Flavours
+        <ul class="flavours">
+            <li><span>Earl Grey &amp; Biscuit</span></li>
+            <li><span>Lemon &amp; Orange</span></li>
+            <li><span>Strawberry &amp; Custard</span></li>
+            <li><span>Raspberry &amp; Vanilla</span></li>
+            <li><span>Double Chocolate</span></li>
+            <li><span>Pistachio</span></li>
+            <li><span>Coffee &amp; Irish Cream</span></li>
+            <li><span>Chocolate &amp; Orange</span></li>
+            <li><span>Hazelnut</span></li>
+        </ul>
+        </p>
+        <div class="allergies"><span>Allergy advice: Contains nuts, gluten,<br /> dairy and eggs.  Please contact us for<br /> a full list of ingredients.</span></div>
+    </div>
+    <!-- /Menu -->
+</body>
+</html>
