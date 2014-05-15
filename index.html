@@ -42,12 +42,6 @@
             border: 0.3em solid white;
         }
         
-        @media all and (min-device-width : 320px) and (max-device-width : 480px) {
-            h1#sticker {
-                font-size: 3em;
-            }
-        }
-        
         #contact {
             position: absolute;
             width: 16em;
@@ -103,7 +97,17 @@
             top: 97%;
             width: 98%;
             text-align: right;
-        }        
+        }    
+        
+       @media all and (min-device-width : 320px) and (max-device-width : 480px) {
+            h1#sticker {
+                font-size: 3em;
+            }
+            
+            .menutitle, .flavours, .allergies {
+                font-size: 80%;    
+            }
+        }
     </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript">
