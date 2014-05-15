@@ -99,8 +99,8 @@
         function openMenu() {
             $(function(){
                 if ( $("#rightmenu").attr("data-open") != "true" ) {
+                    $("rightmenu").css("display", "inline");
                     $("#rightmenu").animate({left: "-=" + $("#rightmenu").css("width")}, 1000);
-                    $("rightmenu").css("display", "initial");
                     $("#rightmenu").attr("data-open", "true");
                 }
             });
