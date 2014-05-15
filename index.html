@@ -113,18 +113,16 @@
     <script type="text/javascript">
         function openMenu() {
             $(function(){
-                if ( $("#rightmenu").attr("data-open") != "true" ) {
+                if ( $("#rightmenu").css("display") == "none" ) {
                     $("#rightmenu").css("display", "inline");
                     $("#rightmenu").animate({left: "-=" + $("#rightmenu").css("width")}, 1000);
-                    $("#rightmenu").attr("data-open", "true");
                 }
             });
         }
         
         function closeMenu() {
             $(function(){
-                if ( $("#rightmenu").attr("data-open") != "false" ) {
-                    $("#rightmenu").attr("data-open", "false");
+                if ( $("#rightmenu").css("display") != "none" ) {
                     $("#rightmenu").animate({left: "+=" + $("#rightmenu").css("width")}, 1000, function(){
                         $("#rightmenu").css("display", "none");
                     });
