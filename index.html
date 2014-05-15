@@ -60,6 +60,7 @@
             width: 15em;
             height: 100%;
             padding: 1em;
+            display: none;
         }
         
         .menutitle {
@@ -99,6 +100,7 @@
             $(function(){
                 if ( $("#rightmenu").attr("data-open") != "true" ) {
                     $("#rightmenu").animate({left: "-=" + $("#rightmenu").css("width")}, 1000);
+                    $("rightmenu").css("display", "initial");
                     $("#rightmenu").attr("data-open", "true");
                 }
             });
@@ -108,6 +110,7 @@
             $(function(){
                 if ( $("#rightmenu").attr("data-open") != "false" ) {
                     $("#rightmenu").animate({left: "+=" + $("#rightmenu").css("width")}, 1000);
+                    $("rightmenu").css("display", "none");
                     $("#rightmenu").attr("data-open", "false");
                 }
             });
