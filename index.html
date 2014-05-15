@@ -118,6 +118,12 @@
 
         ga('create', 'UA-51053608-1', 'lillamacarons.com');
         ga('send', 'pageview');
+
+        var trackOutboundLink = function(url) {
+            ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () {
+                document.location = url;
+            }
+        });
     </script>
     <script type="text/javascript">
         function openMenu() {
@@ -145,9 +151,9 @@
     <div id="contact">
         <span id="ordertext">Place your order here</span><br />
         <span class="icons">
-            <a href="http://facebook.com/macaronslilla"><img src="facebook-4-32.png" alt="facebook"/></a>
-            <a href="http://twitter.com/lilla_macarons"><img src="twitter-4-32.png" alt="twitter"/></a>
-            <a href="mailto:enquiries@lillamacarons.com"><img src="email-14-32.png" alt="email"/></a>
+            <a onclick="trackOutboundLink('http://facebook.com/macaronslilla');" href="http://facebook.com/macaronslilla"><img src="facebook-4-32.png" alt="facebook"/></a>
+            <a onclick="trackOutboundLink('http://twitter.com/lilla_macarons');" href="http://twitter.com/lilla_macarons"><img src="twitter-4-32.png" alt="twitter"/></a>
+            <a onclick="trackOutboundLink('mailto:enquiries@lillamacarons.com');" href="mailto:enquiries@lillamacarons.com"><img src="email-14-32.png" alt="email"/></a>
         </span>
     </div>
     <div id="footer">
