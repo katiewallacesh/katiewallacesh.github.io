@@ -109,9 +109,9 @@
         function closeMenu() {
             $(function(){
                 if ( $("#rightmenu").attr("data-open") != "false" ) {
-                    $("#rightmenu").animate({left: "+=" + $("#rightmenu").css("width")}, 1000).css("display", "none");
-                    //$("#rightmenu").css("display", "none");
+                    $("#rightmenu").animate({left: "+=" + $("#rightmenu").css("width")}, 1000);
                     $("#rightmenu").attr("data-open", "false");
+                    $("#rightmenu").css("display", "none");
                 }
             });
         }
