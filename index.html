@@ -99,7 +99,7 @@
         function openMenu() {
             $(function(){
                 if ( $("#rightmenu").attr("data-open") != "true" ) {
-                    $("rightmenu").css("display", "inline");
+                    $("#rightmenu").css("display", "inline");
                     $("#rightmenu").animate({left: "-=" + $("#rightmenu").css("width")}, 1000);
                     $("#rightmenu").attr("data-open", "true");
                 }
@@ -110,7 +110,7 @@
             $(function(){
                 if ( $("#rightmenu").attr("data-open") != "false" ) {
                     $("#rightmenu").animate({left: "+=" + $("#rightmenu").css("width")}, 1000);
-                    $("rightmenu").css("display", "none");
+                    $("#rightmenu").css("display", "none");
                     $("#rightmenu").attr("data-open", "false");
                 }
             });
