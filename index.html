@@ -60,7 +60,7 @@
             width: 15em;
             height: 100%;
             padding: 1em;
-            display: none;
+            visibility: hidden;
         }
         
         .menutitle {
@@ -99,7 +99,7 @@
         function openMenu() {
             $(function(){
                 if ( $("#rightmenu").attr("data-open") != "true" ) {
-                    $("#rightmenu").css("display", "inline");
+                    $("#rightmenu").css("visibility", "visible");
                     $("#rightmenu").animate({left: "-=" + $("#rightmenu").css("width")}, 1000);
                     $("#rightmenu").attr("data-open", "true");
                 }
@@ -110,7 +110,7 @@
             $(function(){
                 if ( $("#rightmenu").attr("data-open") != "false" ) {
                     $("#rightmenu").animate({left: "+=" + $("#rightmenu").css("width")}, 1000).done(function(){
-                        $("#rightmenu").css("display", "none");
+                        $("#rightmenu").css("visibility", "hidden");
                         $("#rightmenu").attr("data-open", "false");
                     });
                 }
