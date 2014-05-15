@@ -124,10 +124,10 @@
         function closeMenu() {
             $(function(){
                 if ( $("#rightmenu").attr("data-open") != "false" ) {
+                    $("#rightmenu").attr("data-open", "false");
                     $("#rightmenu").animate({left: "+=" + $("#rightmenu").css("width")}, 1000, function(){
                         $("#rightmenu").css("display", "none");
                     });
-                    $("#rightmenu").attr("data-open", "false");
                 }
             });
         }
