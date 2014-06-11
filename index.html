@@ -19,12 +19,12 @@
             min-height: 100%;
             min-width: 100%;
         }
-        
+
         a {
             color: #fff;
             text-decoration: none;
         }
-        
+
         h1#sticker {
             margin: 0 auto;
             text-align: center;
@@ -41,7 +41,7 @@
             color: #fff;
             border: 0.3em solid white;
         }
-        
+
         #contact {
             position: absolute;
             width: 16em;
@@ -49,11 +49,11 @@
             top:85%;
             text-align: left;
         }
-        
+
         #contact .icons {
             padding: 0 0 0 1.5em;
         }
-        
+
         #rightmenu {
             background-color: rgba(128,0,128,0.4);
             color: #fff;
@@ -66,11 +66,11 @@
             padding: 1em;
             display: none;
         }
-        
+
         .menutitle {
             font-size: 150%;
         }
-        
+
         .flavours {
             line-height: 2em;
             font-size: 120%;
@@ -85,27 +85,27 @@
             position: absolute;
             top: 85%;
         }
-        
+
         #ordertext {
             display: none;
             font-size: 120%;
         }
-        
+
         #footer {
             font-size: 70%;
             position: absolute;
             top: 97%;
             width: 98%;
             text-align: right;
-        }    
-        
+        }
+
        @media only screen and (-webkit-device-pixel-ratio:2) {
             h1#sticker {
                 font-size: 3em;
             }
-            
+
             .menutitle, .flavours, .allergies {
-                font-size: 80%;    
+                font-size: 80%;
             }
         }
     </style>
@@ -133,7 +133,7 @@
                 }
             });
         }
-        
+
         function closeMenu() {
             $(function(){
                 if ( $("#rightmenu").css("display") != "none" ) {
@@ -158,7 +158,7 @@
     <div id="footer">
         <span id="attribution">Photo by <a href="https://www.flickr.com/people/24576874@N00">Julien Haler</a> via Flickr</span>
     </div>
-    
+
     <!-- Menu -->
     <div id="rightmenu" onclick="closeMenu();">
         <p class="menutitle">Macaron Flavours</p>
